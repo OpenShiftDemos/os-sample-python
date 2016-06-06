@@ -12,7 +12,7 @@ This sample Python application relies on the support provided by the default S2I
 
 ## Deployment Steps
 
-To deploy this sample Python web application from the OpenShift web console, you should select ``python:2.7``, ``python:3.3``, ``python:3.4`` or ``python:latest``, when using _Add to project_. Use of ``python:latest`` is the same as having selected the most up Python version available, which at this time is ``python:3.4``.
+To deploy this sample Python web application from the OpenShift web console, you should select ``python:2.7``, ``python:3.3``, ``python:3.4`` or ``python:latest``, when using _Add to project_. Use of ``python:latest`` is the same as having selected the most up to date Python version available, which at this time is ``python:3.4``.
 
 The HTTPS URL of this code repository which should be supplied to the _Git Repository URL_ field when using _Add to project_ is:
 
@@ -31,4 +31,3 @@ If needing to select a specific Python version when using ``oc new-app``, you sh
 ```
 oc new-app python:2.7~https://gitlab.com/graham-dumpleton/python-flask-auto.git
 ```
-
