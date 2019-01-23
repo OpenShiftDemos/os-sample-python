@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type='text.css' href='{{url_for('static', filename='static/stylesheet.css') }}'>
+  <title>Dojo Survey</title>
+
+  <style>
+    .wrapper{
+      width: 800px;
+      padding: 30px;
+    }
+    /* .registration_form{
+
+
+    }
+    .form_fields{
+
+
+    } */
+
+  </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="registration_form">
+      <h1>Registration</h1>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{message}}</p>
+          {% endfor%}
+        {% endif%}
+      {% endwith%}
+      <form action="/register" method="post">
+        <div class="form_fields">
+          <label for="first_name">First Name:</label>
+          <input type="text" name="first_name" id="first_name">
+
+          <label for="last_name">Last Name:</label>
+          <input type="text" name="last_name" id="last_name">
+
+          <label for="email">Email:</label>
+          <input type="text" name="email" id="email">
+
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password">
+
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" name="confirm_password" id="confirm_password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
