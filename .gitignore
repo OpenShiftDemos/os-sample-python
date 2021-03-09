@@ -110,4 +110,4 @@ app/templates/.ptp-sync-folder
 .mypy_cache/
 
 # gvim and vim
-.swp
+*.swp
